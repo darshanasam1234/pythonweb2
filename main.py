@@ -1,13 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask
 
 app = Flask(__name__)
 
-messages = [{'title': 'Message One',
-             'content': 'Message One Content'},
-            {'title': 'Message Two',
-             'content': 'Message Two Content'}
-            ]
-
-@app.route('/')
+@app.route("/")
 def index():
-    return render_template('index.html', messages=messages)
+    return "Congratulations, it's a web app!"
